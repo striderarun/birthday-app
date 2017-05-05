@@ -1,0 +1,37 @@
+{
+  "usersList": [
+    {
+      "id": 1,
+      "firstName": "Akshay",
+      "middleName": "Abraham",
+      "lastName": "Oommen",
+      "gender": "M",
+      "birthdate": "18-JAN-92 00:00:00",
+      "profileImage": "../styles/images/sample.profile.pic-2.jpg",
+      "primaryEmail": "akshay_oommen@apple.com",
+      "secondaryEmail": "akshay_oommen@infosys.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Arun",
+      "middleName": "",
+      "lastName": "Mohan",
+      "gender": "M",
+      "birthdate": "27-JAN-90 00:00:00",
+      "profileImage": "../styles/images/sample.profile.pic-2.jpg",
+      "primaryEmail": "arun_mohan@apple.com",
+      "secondaryEmail": ""
+    },
+    {
+      "id": 3,
+      "firstName": "Angel",
+      "middleName": "",
+      "lastName": "Valath",
+      "gender": "M",
+      "birthdate": "25-SEP-87 00:00:00",
+      "profileImage": "../styles/images/sample.profile.pic-2.jpg",
+      "primaryEmail": "angel_valath@infosys.com",
+      "secondaryEmail": ""
+    }
+  ]
+}

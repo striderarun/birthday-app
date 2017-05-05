@@ -1,0 +1,76 @@
+<form name="addUserForm">
+    <main>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">First name</label>
+            <span class="col-md-4">
+                <input type="text" ng-model="formData.firstName" class="event-title" placeholder="Enter the first name" maxlength='20' character-limit="formData.firstName" required/>
+                </input>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">Middle name <span class="optional">(optional)</span></label>
+            <span class="col-md-4">
+                <input type="text" ng-model="formData.middleName" class="event-title" placeholder="Enter the middle name" maxlength='20' character-limit="formData.middleName"/>
+                </input>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">Last name</label>
+            <span class="col-md-4">
+                <input type="text" ng-model="formData.lastName" class="event-title" placeholder="Enter the last name" maxlength='20' character-limit="formData.lastName" required/>
+                </input>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">Gender</label>
+            <dropdown class="col-md-4" ng-model="formData.gender"
+                json-path="../app/scripts/jsons/gendersList.json"
+                dropdown-width="100"
+                placeholder="Set the gender"
+                response-name="gendersList"
+                output-type="array"
+                sort-options-by="option"
+                output-param="value"
+                option-as="option"
+                selection-limit="1">
+            </dropdown>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">Birth Date</label>
+            <span class="col-md-4">
+                <input class="event-date" ng-model="formData.birthDate" datetime-picker date-format="dd-MMM-yyyy" placeholder="Enter the birth date" required/>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">E-mail ID (1)</label>
+            <span class="col-md-4">
+                <input type="text" ng-model="formData.primaryEmail" class="event-title" placeholder="Enter an e-mail ID" required/>
+                </input>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">E-mail ID (2) <span class="optional">(optional)</span></label>
+            <span class="col-md-4">
+                <input type="text" ng-model="formData.secondaryEmail" class="event-title" placeholder="Enter an e-mail ID"/>
+                </input>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group" align="center">
+            <button type="button" class="btn btn-primary" ng-class="{disabled: addUserForm.$invalid || formData.gender.length === 0}" ng-click="saveUser()">Add User</button>
+        </div>
+    </main>
+</form>

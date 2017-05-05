@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+    <configuration>
+        <copy-by-references>
+            <copy-by-reference>org.joda.time.DateTime</copy-by-reference>
+        </copy-by-references>
+    </configuration>
+
+    <mapping map-id="create">
+        <class-a>com.events.domain.Event</class-a>
+        <class-b>com.events.beans.EventBean</class-b>
+        <field-exclude>
+            <a>spotlight</a>
+            <b>spotlight</b>
+        </field-exclude>
+        <field-exclude>
+            <a>invitees</a>
+            <b>invitees</b>
+        </field-exclude>
+    </mapping>
+
+    <mapping map-id="fetch">
+        <class-a>com.events.beans.EventBean</class-a>
+        <class-b>com.events.domain.Event</class-b>
+        <field>
+            <a>spotlight</a>
+            <b>spotlight</b>
+        </field>
+        <field>
+            <a>invitees</a>
+            <b>invitees</b>
+        </field>
+    </mapping>
+
+    <mapping>
+        <class-a>java.lang.Long</class-a>
+        <class-b>com.events.domain.EventSpotlight</class-b>
+        <field>
+            <a>this</a>
+            <b>user.id</b>
+        </field>
+    </mapping>
+
+    <mapping>
+        <class-a>java.lang.Long</class-a>
+        <class-b>com.events.domain.EventInvitees</class-b>
+        <field>
+            <a>this</a>
+            <b>user.id</b>
+        </field>
+    </mapping>
+
+</mappings>

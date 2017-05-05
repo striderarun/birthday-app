@@ -1,0 +1,100 @@
+{
+    "eventsList":[
+        {
+            "eventId":1,
+            "eventType":"Birthday",
+            "eventDate":"18-JUN-2016 18:00:00",
+            "eventTitle":"Joe's birthday",
+            "eventDescription":"Join us as we celebrate with Joe on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":2,
+            "eventType":"Birthday",
+            "eventDate":"19-JUN-2016 16:00:00",
+            "eventTitle":"Angel's birthday",
+            "eventDescription":"Join us as we celebrate with Angel on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":3,
+            "eventType":"Meeting",
+            "eventDate":"20-JUN-2016 16:05:00",
+            "eventTitle":"Meeting with Rajneesh",
+            "eventDescription":"Join us as we celebrate with Michael on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":1,
+            "eventType":"Farewell",
+            "eventDate":"18-JUL-2016 18:00:00",
+            "eventTitle":"Joe's farewell",
+            "eventDescription":"Join us as we bid goodbye to Joe.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":2,
+            "eventType":"Birthday",
+            "eventDate":"19-JUL-2016 16:00:00",
+            "eventTitle":"Angel's birthday",
+            "eventDescription":"Join us as we celebrate with Angel on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":3,
+            "eventType":"Birthday",
+            "eventDate":"20-JUL-2016 16:05:00",
+            "eventTitle":"Michael's birthday",
+            "eventDescription":"Join us as we celebrate with Michael on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":1,
+            "eventType":"Birthday",
+            "eventDate":"18-AUG-2016 18:00:00",
+            "eventTitle":"Joe's birthday",
+            "eventDescription":"Join us as we celebrate with Joe on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":2,
+            "eventType":"Birthday",
+            "eventDate":"19-AUG-2016 16:00:00",
+            "eventTitle":"Angel's birthday",
+            "eventDescription":"Join us as we celebrate with Angel on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":3,
+            "eventType":"Birthday",
+            "eventDate":"20-AUG-2016 16:05:00",
+            "eventTitle":"Michael's birthday",
+            "eventDescription":"Join us as we celebrate with Michael on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":1,
+            "eventType":"Birthday",
+            "eventDate":"18-SEP-2016 18:00:00",
+            "eventTitle":"Joe's birthday",
+            "eventDescription":"Join us as we celebrate with Joe on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":2,
+            "eventType":"Birthday",
+            "eventDate":"19-SEP-2016 16:00:00",
+            "eventTitle":"Angel's birthday",
+            "eventDescription":"Join us as we celebrate with Angel on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        },
+        {
+            "eventId":3,
+            "eventType":"Birthday",
+            "eventDate":"20-SEP-2016 16:05:00",
+            "eventTitle":"Michael's birthday",
+            "eventDescription":"Join us as we celebrate with Michael on his special day.",
+            "eventVenue": "Ground floor, Pantry"
+        }
+    ]
+}

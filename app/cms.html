@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	console.log("one");
+    $("#button").click(function(){
+        console.log("yes");
+        var obj = {
+				'firstName'	: $('#fname').val(),
+				'lastName' : $('#lname').val(),
+			};
+					  console.log(obj); 
+    var options = {
+		                    url: "https://arun.corp.apple.com:8443/services/public/workflow/save?token=aShf_VoIDxqtXAMQUuiaCMwFGfPiW16b3ErNC2dE1K1lA6qCkBTNtTlZSRzLopsxSFDNniA-R-ih0maqLpDUnD7jnso7LBnd-OEkwQrRT3c",
+		                    type: 'POST',
+		                    headers: {
+		                        'Accept': 'application/json',
+		                        'Content-Type': 'application/json',
+		                        'Market-Code':'RETAIL',
+		                         'app-id':'4184', 
+		                         'Encrypted-Data':'MzU1MjozNTU1', 
+		                         'override-authentication':'true', 
+		                         'ds-id':'2303040764'
+		                        }
+		                  };
+		    options.data = JSON.stringify(obj)
+		    console.log(options);
+		    $.ajax(options);
+		    
+    });
+    
+
+		    
+});
+</script>
+</head>
+<body>
+    <form>
+        First Name : <input type="text" id="fname" name="firstName"><br />
+        			<input type="text" id="lname" name="lastName">
+        <button id="button" value="Submit"> Submit
+    </form>
+</body>
+</html>

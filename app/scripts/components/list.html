@@ -1,0 +1,12 @@
+<table class="list-view" style="width: 1600px">
+    <thead>
+        <tr>
+            <th ng-repeat="header in headers" style="min-width: {{columnWidths[$index]}}">{{header}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in data" class="pointer-type">
+            <td ng-repeat="inc in include" style="min-width: {{columnWidths[$index]}}">{{item[inc]}}</td>
+        </tr>
+    </tbody>
+</table>

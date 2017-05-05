@@ -1,0 +1,8 @@
+## yaxy configuration file
+## defines where stuff is loaded from
+
+localhost:8081/app/services => localhost:8081/app/services
+
+// Everything else is local!
+localhost:8081 => file:////Users/arun_subramonian/Documents/BdayRobot/sample-project
+

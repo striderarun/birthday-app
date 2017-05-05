@@ -1,0 +1,103 @@
+<form name="addEventForm">
+    <main>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px;">Event Type</label>
+            <dropdown class="col-md-4" ng-model="formData.type"
+                json-path="../app/scripts/jsons/typesList.json"
+                dropdown-width="100"
+                placeholder="Provide the type"
+                response-name="typesList"
+                output-type="array"
+                sort-options-by="option"
+                output-param="value"
+                option-as="option"
+                selection-limit="1"
+                on-change="populateDefaultEventTemplate()">
+            </dropdown>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px;">Event Spotlight</label>
+            <dropdown class="col-md-4" ng-model="formData.spotlight"
+                dropdown-width="100"
+                placeholder="Set the spotlight"
+                output-type="array"
+                sort-options-by="primaryEmail"
+                output-param="id"
+                option-as="primaryEmail"
+                factory="usersService"
+                service="fetchUsers"
+                selection-limit="1"
+                selected-options="formData.spotlightDetails"
+                on-change="populateDefaultEventTemplate()">
+            </dropdown>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px;">Event Title</label>
+            <span class="col-md-4">
+                <input type="text" ng-model="formData.title" class="event-title" placeholder="Enter the event's title" maxlength='50' character-limit="formData.title" required/>
+                </input>
+                <div class="checkbox-section">
+                    <input type="checkbox" ng-model="formData.titleEqualsSubject"></input>
+                    <span style="font-size: 10px">E-mail subject same as title</span>
+                </div>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px;">Event Description</label>
+            <span class="col-md-4">
+                <textarea ng-model="formData.description" placeholder="Enter the event's description" maxlength='250' character-limit="formData.description" class="event-description" required></textarea>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px;">Invitees List</label>
+            <dropdown class="col-md-4" ng-model="formData.invitees"
+                dropdown-width="100"
+                placeholder="Select the invitees"
+                output-type="array"
+                sort-options-by="primaryEmail"
+                output-param="id"
+                option-as="primaryEmail"
+                factory="usersService"
+                service="fetchUsers"
+                show-checkbox="true">
+            </dropdown>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px;">Event Date</label>
+            <span class="col-md-4">
+                <input class="event-date" ng-model="formData.eventDate" datetime-picker date-format="dd-MMM-yyyy HH:mm" placeholder="Enter the event's date" required/>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px;">Event Venue</label>
+            <dropdown class="col-md-4" ng-model="formData.venue"
+                json-path="../app/scripts/jsons/venuesList.json"
+                dropdown-width="100"
+                placeholder="Provide the venue"
+                response-name="venuesList"
+                output-type="array"
+                sort-options-by="option"
+                output-param="value"
+                option-as="option"
+                selection-limit="1">
+            </dropdown>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row" align="center">
+            <button type="button" class="btn btn-primary" ng-class="{disabled: addEventForm.$invalid || formData.type.length === 0 || formData.venue.length === 0 || formData.spotlightUsers.length === 0 || formData.receiverList.length === 0}" ng-click="saveOrUpdateEvent()">{{submitBtn}}</button>
+        </div>
+    </main>
+</form>

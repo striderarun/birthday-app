@@ -1,0 +1,508 @@
+@CHARSET "UTF-8";
+form {
+    margin-top: 20px;
+}
+header, section {
+    padding: 15px 10%;
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+nav {
+    display: inline-block;
+    width: 32.3%;
+}
+
+.event-details nav, .add-options nav  {
+    display: inline-block;
+    width: 24%;
+}
+
+i {
+    cursor: pointer;
+    float: left;
+    margin: 0 42%;
+}
+
+table.upcoming-events-list-view {
+    margin-top: 2.5%;
+    width: 100%;
+}
+
+table.upcoming-events-list-view thead tr {
+    background: #fb7703;
+    color: #ffffff;
+}
+
+table.upcoming-events-list-view td, table.upcoming-events-list-view th {
+    padding: 2%;
+}
+
+table.upcoming-events-list-view tbody {
+    display: block;
+    height: 550px;
+    overflow: auto;
+}
+
+table.upcoming-events-list-view thead, table.upcoming-events-list-view tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+table.upcoming-events-list-view tbody tr:hover, table.upcoming-events-list-view tbody tr.selected  {
+    background: lightgray;
+}
+
+.birthday-bg {
+    background-image: url("images/birthday-bg.jpg");
+}
+
+.angularjs-datetime-picker {
+    left: 45% !important;
+}
+.angularjs-datetime-picker input[type=range] {
+    width: 100%;
+}
+
+.calendar-icon {
+    color: #ffa700;
+    font-size: 2em;
+    opacity: 0.5;
+    -webkit-user-select: none;
+}
+
+.chars-remaining {
+    font-size: 12px;
+    font-style: italic
+}
+
+.coming-soon {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.control-panel {
+    background-color: #fb7703;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.desktop-view {
+    display: block;
+}
+
+.dropdown {
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffa700;
+    width: 100%;
+    z-index: 5;
+    max-height: 200px;
+    overflow: auto;
+    top: 94%;
+}
+
+.dropdown-option {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown-option.hover {
+    background-color: darkred;
+    color: white;
+}
+
+.edit-icon {
+    display: none;
+}
+
+.edit-icon-size {
+    font-size: 2em;
+}
+
+.event-description {
+    padding: 10px;
+    resize: vertical;
+    width: 100%;
+    min-height: 100px;
+}
+
+.event-details {
+    background: #fb7703;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100%;
+    padding: 1% 1%;
+}
+
+.event-details-content {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 25px;
+    height: 80%;
+}
+
+.event-details-content main {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.event-details-content summary {
+    text-align: center;
+    padding: 5%;
+    height: 50%;
+}
+
+.event-details-content footer {
+    text-align: center;
+    padding: 5%;
+    height: 20%;
+}
+
+.event-details-content footer .footer-label {
+    font-weight: bold;
+    font-color: black;
+}
+
+.event-title {
+    border: 1px #7e7e7e solid;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    width: 100%;
+}
+
+.event-date {
+    border: 1px #7e7e7e solid;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    width: 100%;
+}
+
+.loading, .events-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5); /*dim the background*/
+}
+
+.events-overlay {
+    background-color: #ffffff;
+    height: 200px;
+    margin: auto;
+    margin-top: 250px;
+    width: 50%;
+}
+
+.focused {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.form-group.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.form-group.row .col-md-4 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.icon-size, .edit-icon-size {
+    font-size: 4em;
+}
+
+.icon-color {
+    color: #ffffff;
+}
+
+.icon-color:hover {
+    color: indianred;
+}
+
+.icon-color-active, .icon-color-active:hover {
+    color: darkred;
+}
+
+.input-field {
+    max-height: 200px;
+    width: 100%;
+    display: inline-block;
+    border: 1px #7e7e7e solid;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.full {
+    border: 1px #ffffff solid;
+}
+
+.input-field input:focus {
+    outline-width: 0;
+}
+
+.input-field input {
+    border: 0px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 3px;
+    width: auto;
+}
+
+.list-view {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 20px auto;
+}
+
+.list-view thead {
+    background-color: peachpuff;
+}
+
+.list-view td, .list-view th {
+    padding: 20px 5px;
+    text-align: left;
+}
+
+.list-view tr {
+    display: block;
+    position: relative;
+}
+
+.list-view tbody tr:hover {
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+.list-view tbody {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 500px;
+}
+
+.mail-details-adjustment {
+    border: 0;
+    border-radius: 0;
+    margin: 1% 25%;
+    padding: 0;
+}
+
+.mobile-view {
+    display: none;
+}
+
+.month-header {
+    background-color: #ffa700;
+    border-radius: 5px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 1% 0%;
+    text-align: center;
+    width: 25%;
+    -webkit-user-select: none;
+
+}
+
+.optional {
+    font-style: italic;
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+.overlay-content {
+   height: 100%;
+   padding: 0%;
+}
+
+.overlay-footer {
+    background-color: #ffc04d;
+    height: 25%;
+    padding: 8px 5%;
+}
+
+.overlay-summary {
+    height: 75%;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.pill-content {
+    margin-left: 5px;
+    padding-right: 5px;
+}
+
+.pointer-type {
+    cursor: pointer;
+}
+
+.selected-option {
+    background-image: linear-gradient(to bottom, #e59400, #ffae19);
+    border: 1px solid;
+    border-radius: 5px;
+    display: inline-block;
+    height: 80%;
+    padding: 5px;
+    margin: 5px 0px 5px 5px;
+    text-align: center;
+    width: 95%;
+    font-weight: bold;
+    color: #7f5200;
+}
+
+.slide-up-icon {
+    font-size: 2em;
+    opacity: 0.5;
+    position: fixed;
+    right: -35%;
+}
+
+.spinner-color {
+    color: white;
+    width: 100%;
+    margin-top: 20%;
+    text-align: center;
+}
+
+.tooltip-text-size {
+    font-size: 15px;
+}
+
+.upload-button {
+
+}
+
+.upload-image {
+    margin-top: 13px;
+    min-width: 160px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+@media screen and (max-width: 1000px) {
+    header, section {
+        padding: 5% 10%;
+    }
+
+    input, textarea, .chars-remaining, .checkbox-section, .dropdown-option, .form-group label {
+        text-align: center;
+    }
+
+    nav {
+        display: inline-block;
+        width: 32%;
+    }
+
+    table.upcoming-events-list-view td, table.upcoming-events-list-view th {
+        padding: 5%;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .edit-icon-size {
+        font-size: 2.5em;
+    }
+
+    .event-details nav, .add-options nav{
+        display: inline-block;
+        width: 23%;
+        margin-top: 15px;
+    }
+
+    .events-overlay {
+        width: 95%;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .input-field input, .selected-option {
+        width: 97%;
+    }
+
+    .month-header {
+        background-color: #ffa700;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 5%;
+        text-align: center;
+        width: 80%;
+    }
+
+    .profile-image {
+        display: block;
+        margin: auto auto 10px auto;
+    }
+
+    .selected-option {
+        display: block;
+    }
+
+    .upload-image {
+        margin: 13px auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    table.upcoming-events-list-view td, table.upcoming-events-list-view th {
+        padding: 10%;
+    }
+    nav {
+        display: inline-block;
+        width: 30%;
+    }
+
+    .angularjs-datetime-picker {
+        left: 22% !important;
+    }
+
+    .edit-icon-size {
+        font-size: 2em;
+    }
+
+    .event-details nav, .add-options nav {
+        display: inline-block;
+        width: 22%;
+    }
+
+    .event-details-content main {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .icon-size {
+        font-size: 3em;
+    }
+
+    .pill-content {
+        margin-right: 15px;
+    }
+}

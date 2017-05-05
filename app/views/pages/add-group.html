@@ -1,0 +1,32 @@
+<form name="addGroupForm">
+    <main>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">Group name</label>
+            <span class="col-md-4">
+                <input type="text" ng-model="formData.name" class="event-title" placeholder="Enter the group name" required/>
+                </input>
+            </span>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">Invitees List</label>
+            <dropdown class="col-md-4" ng-model="formData.invitees"
+                dropdown-width="100"
+                placeholder="Select the invitees"
+                output-type="array"
+                sort-options-by="primaryEmail"
+                output-param="id"
+                option-as="primaryEmail"
+                service="fetchUsers"
+                factory="usersService"
+                show-checkbox="true">
+            </dropdown>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group" align="center">
+            <button type="button" class="btn btn-primary" ng-class="{disabled: addGroupForm.$invalid || formData.invitees.length === 0}" ng-click="saveGroup()">Add Group</button>
+        </div>
+    </main>
+</form>

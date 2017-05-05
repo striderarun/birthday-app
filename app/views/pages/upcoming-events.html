@@ -1,0 +1,76 @@
+<section class="upcoming-events">
+    <!-- <i class="fa fa-arrow-circle-o-up slide-up-icon pointer-type" aria-hidden="true" ng-click="scrollToTop()"></i> -->
+    <!-- Desktop view -->
+    <div class="desktop-view" align="center">
+        <span class="fa fa-arrow-circle-left pointer-type calendar-icon" aria-hidden="true" ng-click="adjustMonthYear(-1)"></span>
+        <main class="month-header">{{month}}</main>
+        <span class="fa fa-arrow-circle-right pointer-type calendar-icon" aria-hidden="true" ng-click="adjustMonthYear(1)"></span>
+        <table class="upcoming-events-list-view">
+            <tbody class="list-content">
+                <tr ng-repeat="event in eventsList" class="pointer-type" ng-click="toggleEventDetails('show', $event, $index)">
+                    <td width="5%">
+                        <i class="fa fa-2x" ng-class="{'fa-users': event.type === 'MEETING', 'fa-gift': event.type === 'BIRTHDAY', 'fa-hand-spock-o': event.type === 'FAREWELL'}"
+                           uib-tooltip="{{event.type | titleCase}}"
+                           tooltip-placement="right"
+                           tooltip-trigger="mouseenter"
+                           tooltip-class="tooltip-text-size"></i>
+                    </td>
+                    <td width="15%">{{event.title}}</td>
+                    <td width="40%" class="desktop-only">{{event.description}}</td>
+                    <td width="20%" class="desktop-only">{{event.venue}}</td>
+                    <td width="20%" class="desktop-only">{{event.eventDayAndTime}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="event-details">
+            <nav>
+                <i class="fa fa-chevron-circle-up icon-color edit-icon-size edit-icon"
+                   aria-hidden="true"
+                   uib-tooltip="Back to list view"
+                   tooltip-placement="right"
+                   tooltip-trigger="mouseenter"
+                   tooltip-class="tooltip-text-size"
+                   ng-click="toggleEventDetails('hide', $event)">
+                </i>
+            </nav>
+            <nav>
+                <i class="fa fa-envelope pointer-type icon-color edit-icon-size edit-icon"
+                   aria-hidden="true"
+                   uib-tooltip="Send Reminder"
+                   tooltip-placement="right"
+                   tooltip-trigger="mouseenter"
+                   tooltip-class="tooltip-text-size"
+                   ng-click="showReminderOverlay()">
+                </i>
+            </nav>
+            <nav>
+                <i class="fa fa-trash pointer-type icon-color edit-icon-size edit-icon"
+                   aria-hidden="true"
+                   uib-tooltip="Delete Event"
+                   tooltip-placement="right"
+                   tooltip-trigger="mouseenter"
+                   tooltip-class="tooltip-text-size"
+                   ng-click="showDeleteOverlay()">
+                </i>
+            </nav>
+            <nav>
+                <i class="fa fa-pencil-square-o pointer-type icon-color edit-icon-size edit-icon"
+                   aria-hidden="true"
+                   uib-tooltip="Edit Event"
+                   ui-sref="add.add-event({eventId: selectedEvent.id})"
+                   tooltip-placement="right"
+                   tooltip-trigger="mouseenter"
+                   tooltip-class="tooltip-text-size">
+                </i>
+            </nav>
+            <section class="event-details-content edit-icon">
+                <main>{{selectedEvent.title}}</main>
+                <summary>{{selectedEvent.description}}</summary>
+                <footer>
+                    <div><span class="footer-label">When: </span>{{selectedEvent.eventDayAndTime}}</div>
+                    <div><span class="footer-label">Where: </span>{{selectedEvent.venue}}</div>
+                </footer>
+            </section>
+        </section>
+    </div>
+</section>

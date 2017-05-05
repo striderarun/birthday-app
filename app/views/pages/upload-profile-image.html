@@ -1,0 +1,36 @@
+<form name="uploadProfileImageForm" ng-submit="uploadImage()">
+    <main>
+        <div class="form-group row">
+            <span class="col-md-3"></span>
+            <label class="col-md-2 col-sm-12 col-xs-12" style="margin: 10px 0px">Select a user</label>
+            <dropdown class="col-md-4" ng-model="formData.user"
+                dropdown-width="100"
+                placeholder="Select a user"
+                output-type="array"
+                sort-options-by="primaryEmail"
+                output-param="id"
+                option-as="primaryEmail"
+                service="fetchUsers"
+                factory="usersService"
+                selection-limit="1"
+                on-change="onUserSelect()">
+            </dropdown>
+            <span class="col-md-3"></span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-5"></span>
+            <img class="profile-image" ng-src="{{downloadImageUrl}}">
+        </div>
+        <div class="form-group" align="center">
+            <div class="btn btn-info"
+                ngf-select="uploadImage($file)"
+                ng-model="file"
+                name="file"
+                ngf-pattern="'image/*'"
+                ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+                ngf-resize="{width: 225, height: 250}"
+                style="border: 1px solid gray"
+                ng-disabled="!uploadImageUrl">Select & Upload Image</div>
+        </div>
+    </main>
+</form>

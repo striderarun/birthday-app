@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <!-- Test User Image upload : Uploading image for user id 2 (make sure you have saved a user with id 2 in your db first!) -->
+    <!--
+<form method="POST" enctype="multipart/form-data" action="http://localhost:8081/app/services/users/2/image">
+        User Image to upload(JPEG or PNG): <input type="file" name="image"><br />
+        <input type="submit" value="Upload"> Press here to upload the file
+    </form>
+ -->
+
+    <!-- Test Event Image upload : Uploading image for event id 9 (make sure you have saved an event with id 9 in your db first!) -->
+    <form method="POST" enctype="multipart/form-data" action="http://localhost:8081/app/services/users/46/image">
+        Event Image to upload(JPEG or PNG): <input type="file" name="image"><br />
+        <input type="submit" value="Upload"> Press here to upload the file
+    </form>
+    
+    <form method="POST" action="http://localhost:8081/app/services/upload" enctype="multipart/form-data">
+		File to upload: <input type="file" name="file"><br /> 
+		<input type="submit" value="Upload"> Press here to upload the file!
+	</form>
+
+
+</html>

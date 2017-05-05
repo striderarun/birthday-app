@@ -1,0 +1,24 @@
+<div class="dropdown" style="width: {{dropdownWidth}}%">
+    <div class="input-field" ng-class="{focused: isFocused, full: selectionLimit && selectedOptions.length === selectionLimit, error: selectedOptions.length === 0 && submitted}" ng-click="displayOptions($event)">
+        <div class="selected-option" ng-repeat="option in selectedOptions">
+            <span class="fa fa-times" aria-hidden="true" style="float: left; padding: 4px; cursor: pointer" ng-click="removeSelectedOption($index, $event)"></span>
+            <span class="pill-content" ng-bind="option[optionAs]"></span>
+        </div>
+        <input type="text" placeholder="{{placeholder}}" ng-model="searchText" ng-focus="isFocused = true" ng-blur="hideOptions()" ng-show="selectedOptions.length === 0" ng-disabled="selectionLimit && selectedOptions.length === selectionLimit" ng-keydown="navigate($event)">
+        <input type="text" ng-model="searchText" ng-focus="isFocused = true" ng-blur="hideOptions()" ng-show="selectedOptions.length !== 0 && ((selectionLimit && selectedOptions.length !== selectionLimit) || !selectionLimit)" ng-disabled="selectionLimit && selectedOptions.length === selectionLimit" ng-keydown="navigate($event)">
+        </div>
+        <div class="dropdown-content dropdown-hidden">
+        <div class="dropdown-option"
+            ng-bind="option[optionAs]"
+            ng-class="{hover: isHover}"
+            ng-click="selectOption($index, $event)"
+            ng-mouseout="isHover = false"
+            ng-mouseover="isHover = true"
+            ng-repeat="option in filteredOptions = (availableOptions | filter: searchText)"></div>
+        <div class="dropdown-option" ng-show="(availableOptions | filter: searchText).length === 0">No results found</div>
+    </div>
+</div>
+<div class="checkbox-section" ng-show="showCheckbox">
+    <input type="checkbox" ng-model="temp.isSelected" ng-change="toggleSelect()"></input>
+    <span style="font-size: 10px">Select All</span>
+</div>

@@ -1,0 +1,16 @@
+{
+  "typesList": [
+    {
+      "option": "Meeting",
+      "value": "MEETING"
+    },
+    {
+      "option": "Farewell",
+      "value": "FAREWELL"
+    },
+    {
+      "option": "Birthday",
+      "value": "BIRTHDAY"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<div class="events-modal" ng-show="showModal">
+    <div class="events-overlay">
+        <section class="overlay-content">
+            <summary class="overlay-summary">{{modalMessage}}</summary>
+            <footer class="overlay-footer">
+                 <button type="submit" class="btn btn-danger" ng-show="cancelBtnText" ng-click="showModal= false; onCancel()">{{cancelBtnText}}</button>
+                 <button type="submit" class="btn btn-primary" ng-show="doneBtnText" ng-click="showModal= false; onDone()" style="float: right">{{doneBtnText}}</button>
+            </footer>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js" data-ng-app="sales-events">
+    <head>
+        <meta charset="utf-8">
+        <title>Sample home page</title>
+
+        <!-- CSS files -->
+        <link rel="stylesheet" href="../bower_components/angularjs-datetime-picker/angularjs-datetime-picker.css"/>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="../bower_components/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.css">
+        <link rel="stylesheet" href="../bower_components/jquery-minicolors/jquery.minicolors.css">
+        <link rel="stylesheet" href="../app/styles/common.css">
+        <!-- CSS files end-->
+
+    </head>
+    <body directive-controller>
+        <section class="home control-panel">
+            <nav>
+                <i class="fa fa-calendar icon-size icon-color" aria-hidden="true" ui-sref="upcoming-events"
+                    uib-tooltip="Upcoming Events"
+                    ui-sref-active="icon-color-active"
+                    tooltip-placement="right"
+                    tooltip-trigger="mouseenter"
+                    tooltip-class="tooltip-text-size">
+                </i>
+            </nav>
+            <nav>
+                <i class="fa fa-plus-square icon-size icon-color" aria-hidden="true" ui-sref="add"
+                    uib-tooltip="Add"
+                    ui-sref-active="icon-color-active"
+                    tooltip-placement="right"
+                    tooltip-trigger="mouseenter"
+                    tooltip-class="tooltip-text-size">
+                </i>
+            </nav>
+            <nav>
+                <i class="fa fa-upload icon-size icon-color coming-soon" aria-hidden="true" ui-sref="upload-events"
+                    uib-tooltip="Upload Events"
+                    ui-sref-active="icon-color-active"
+                    tooltip-placement="right"
+                    tooltip-trigger="mouseenter"
+                    tooltip-class="tooltip-text-size">
+                </i>
+            </nav>
+        </section>
+        <ui-view></ui-view>
+        <modal  on-done="overlay.onDone()"
+                on-cancel="overlay.onCancel()"
+                show-modal="overlay.show"
+                cancel-btn-text="overlay.cancelBtnTxt"
+                done-btn-text="overlay.doneBtnTxt"
+                modal-message="overlay.message"></modal>
+        <div class="loading" ng-show="isLoading">
+            <div class="fa fa-cog fa-spin fa-3x spinner-color"></div>
+        </div>
+    </body>
+
+    <!-- JS libraries, frameworks and plugins that the application run on-->
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angularjs-datetime-picker/angularjs-datetime-picker.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <!-- JS libraries, frameworks and plugins end-->
+    <!-- App file, controllers, services and other components -->
+
+    <script src="../app/scripts/app.js"></script>
+    <script src="../app/scripts/controllers/AddEventController.js"></script>
+    <script src="../app/scripts/controllers/AddGroupController.js"></script>
+    <script src="../app/scripts/controllers/AddUserController.js"></script>
+    <script src="../app/scripts/controllers/UpcomingEventsController.js"></script>
+    <script src="../app/scripts/controllers/UploadEventsController.js"></script>
+    <script src="../app/scripts/controllers/UploadProfileImageController.js"></script>
+    <script src="../app/scripts/components/CharacterLimit.js"></script>
+    <script src="../app/scripts/components/DirectiveController.js"></script>
+    <script src="../app/scripts/components/Dropdown.js"></script>
+    <script src="../app/scripts/components/Modal.js"></script>
+    <script src="../app/scripts/components/List.js"></script>
+    <script src="../app/scripts/services/EmailsFactory.js"></script>
+    <script src="../app/scripts/services/EventsFactory.js"></script>
+    <script src="../app/scripts/services/GroupsFactory.js"></script>
+    <script src="../app/scripts/services/UsersFactory.js"></script>
+    <script src="../app/scripts/utils/ListFilter.js"></script>
+    <script src="../app/scripts/utils/TitleCase.js"></script>
+    <script src="../app/scripts/utils/EventsConstants.js"></script>
+
+    <!-- App components end-->
+</html>

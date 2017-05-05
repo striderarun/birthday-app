@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        maven {
+     	 	url "https://plugins.gradle.org/m2/"
+    	}
+    }
+    dependencies {
+        classpath ("gradle.plugin.at.comm_unity.gradle.plugins:jpamodelgen-plugin:1.1.1")
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'at.comm_unity.gradle.plugins.jpamodelgen'
+
+mainClassName = 'com.events.config.ApplicationConfig'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.3.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:1.3.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-mail:1.3.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-velocity:1.3.1.RELEASE")
+    compile("org.springframework:spring-context-support:4.2.4.RELEASE")
+    
+    compile("com.fasterxml.jackson.core:jackson-core:2.6.4")
+    compile("com.fasterxml.jackson.core:jackson-databind:2.6.4")
+    compile("com.fasterxml.jackson.core:jackson-annotations:2.6.4")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-joda:2.6.4")
+    
+    compile("joda-time:joda-time:2.8.2")
+    compile("org.hsqldb:hsqldb:2.2.8")
+    
+    compile("org.apache.commons:commons-lang3:3.4")
+    compile("net.sf.dozer:dozer:5.5.1")
+    compile("org.jadira.usertype:usertype.core:3.2.0.GA")
+    compile("com.google.guava:guava:18.0")
+    compile("commons-fileupload:commons-fileupload:1.3.1")
+    
+    compile("org.apache.poi:poi:3.9")
+    compile("org.apache.poi:poi-ooxml:3.9") 
+    
+    compile('org.hibernate:hibernate-jpamodelgen:5.1.0.Final')
+}
+
+jpaModelgen {
+     jpaModelgenSourcesDir = "target/generated-sources"
+}
+
+compileJava.options.compilerArgs += ["-proc:none"]
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
