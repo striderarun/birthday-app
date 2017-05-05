@@ -1,0 +1,21 @@
+{
+  "name": "sample-project",
+  "version": "0.1.0",
+  "description": "A sample project built using gruntJS",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:striderarun/events-management.git"
+  },
+  "keywords": [
+    "sample"
+  ],
+  "author": “Arun”,
+  "license": “MIT”,
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-karma": "^2.0.0",
+    "karma-ng-html2js-preprocessor": "^1.0.0"
+  }
+}

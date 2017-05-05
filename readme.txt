@@ -4,7 +4,7 @@ Sales Events project setup steps
 1) UI code setup -
 
     a. Install Git, Bower, Node.js, Yaxy and Karma
-    b. Make a pull from the following git repo (git@gitlab.corp.apple.com:akshay_oommen/sample-project.git)
+    b. Make a pull from the git repo
     c. Once the pull is successful, go to 'sample-project' directory
     d. Run 'npm install' to install the packages mentioned in 'package.json'
     e. Run 'bower install' to install the libraries and frameworks mentioned in 'bower.json'
@@ -39,7 +39,7 @@ Sales Events project setup steps
 
 4) Server setup -
 
-    a. Checkout the code from the git repo (git@gitlab.corp.apple.com:akshay_oommen/sample-project.git)
+    a. Checkout the code from the git repo
     b. Make sure database is started.
     c. Go to sample-project directory and execute './gradlew run'
     d. Enter the Matrix !!
