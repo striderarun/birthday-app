@@ -1,0 +1,16 @@
+{
+  "venuesList": [
+    {
+      "option": "Conference Room 1, Ground floor",
+      "value": "Conference Room 1, Ground floor"
+    },
+    {
+      "option": "Conference Room 2, Ground floor",
+      "value": "Conference Room 2, Ground floor"
+    },
+    {
+      "option": "Pantry, Ground floor",
+      "value": "Pantry, Ground floor"
+    }
+  ]
+}

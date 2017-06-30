@@ -1,0 +1,12 @@
+{
+  "gendersList": [
+    {
+      "option": "Male",
+      "value": "MALE"
+    },
+    {
+      "option": "Female",
+      "value": "FEMALE"
+    }
+  ]
+}
