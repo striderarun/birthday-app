@@ -10,36 +10,36 @@ angular.module('sales-events', ['ui.router', 'ui.bootstrap', 'angularjs-datetime
     $stateProvider
     .state('upcoming-events', {
         url: '/upcoming-events',
-        templateUrl: 'views/pages/upcoming-events.html',
+        templateUrl: 'app/views/pages/upcoming-events.html',
         controller: 'UpcomingEventsController'
     })
     .state('upload-events', {
         url: '/upload-events',
-        templateUrl: 'views/pages/upload-events.html',
+        templateUrl: 'app/views/pages/upload-events.html',
         controller: 'UploadEventsController'
     })
     .state('add', {
         url: '/add',
-        templateUrl: 'views/pages/add.html',
+        templateUrl: 'app/views/pages/add.html',
     })
     .state('add.add-event', {
         url: '/event/{eventId}',
-        templateUrl: 'views/pages/add-event.html',
+        templateUrl: 'app/views/pages/add-event.html',
         controller: 'AddEventController'
     })
     .state('add.add-user', {
         url: '/user',
-        templateUrl: 'views/pages/add-user.html',
+        templateUrl: 'app/views/pages/add-user.html',
         controller: 'AddUserController'
     })
     .state('add.add-group', {
         url: '/group',
-        templateUrl: 'views/pages/add-group.html',
+        templateUrl: 'app/views/pages/add-group.html',
         controller: 'AddGroupController'
     })
     .state('add.upload-profile-image', {
         url: '/upload-profile-image/{userId}',
-        templateUrl: 'views/pages/upload-profile-image.html',
+        templateUrl: 'app/views/pages/upload-profile-image.html',
         controller: 'UploadProfileImageController'
     });
 }]);

@@ -49,7 +49,7 @@ angular.module('sales-events').directive('dropdown', ['$http', '$injector', '$ro
             showCheckbox: '=',
             onChange: '&'
         },
-        templateUrl: 'scripts/components/dropdown.html',
+        templateUrl: 'app/scripts/components/dropdown.html',
         link: function($scope, elm, attr, ctrl, transclude) {
             ctrl.displayDirectiveName('dropdown');
 

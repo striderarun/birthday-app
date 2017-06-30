@@ -15,7 +15,7 @@ angular.module('sales-events').controller('UploadProfileImageController', ['user
         var downloadImgUrl,
             uploadImgUrl;
 
-        $scope.downloadImageUrl = 'styles/images/profile.image.jpg';
+        $scope.downloadImageUrl = 'app/styles/images/profile.image.jpg';
         $scope.formData = {
             user: $state.params.userId ? $state.params.userId.split(',') : []
         };

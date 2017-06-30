@@ -28,7 +28,7 @@ angular.module('sales-events').directive('list', ['$http', '$injector', '$rootSc
             responseName: '@',
             service: '@'
         },
-        templateUrl: 'scripts/components/list.html',
+        templateUrl: 'app/scripts/components/list.html',
         link: function($scope, elm, attr, ctrl, transclude) {
             if ($scope.service && $scope.factory) {
                 var dataFactory = $injector.get($scope.factory);

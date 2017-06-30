@@ -38,7 +38,7 @@ angular.module('sales-events')
 
         };
     })()).constant('eventsUrls', (function() {
-        var REST_URL_PREFIX = "services",
+        var REST_URL_PREFIX = "app/services",
             EMAILS = "/emails",
             EVENTS = "/events",
             GROUPS = "/groups",

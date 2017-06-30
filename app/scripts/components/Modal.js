@@ -28,7 +28,7 @@ angular.module('sales-events').directive('modal', ['$interpolate', function ($in
             showModal: '='
 
         },
-        templateUrl: 'scripts/components/modal.html',
+        templateUrl: 'app/scripts/components/modal.html',
         link: function($scope, elm, attr, ctrl) {
             ctrl.displayDirectiveName('modal');
         }
