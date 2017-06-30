@@ -9,8 +9,8 @@
   "keywords": [
     "sample"
   ],
-  "author": “Arun”,
-  "license": “MIT”,
+  "author": "Arun",
+  "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
