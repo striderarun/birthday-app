@@ -1,0 +1,14 @@
+#Idea
+.idea/
+**/*.iml
+
+#Gradle
+.gradle/
+build/
+target/
+
+#Node
+node_modules/
+
+#Bower
+bower_components/
