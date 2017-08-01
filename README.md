@@ -1,6 +1,7 @@
 
+[![Build Status](https://travis-ci.org/striderarun/birthday-app.svg?branch=master)](https://travis-ci.org/striderarun/birthday-app)
 
-Sales Events project setup steps
+Project setup steps
 --------------------------------
 
 1) UI code setup -
