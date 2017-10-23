@@ -1,17 +1,12 @@
 package com.events.service.impl;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-
+import com.events.beans.EventBean;
+import com.events.config.ConversionConfig;
+import com.events.domain.Event;
+import com.events.logging.Loggable;
+import com.events.repository.EventsRepository;
+import com.events.service.EventsService;
+import com.events.specification.EventsSpecification;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,17 +16,10 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.velocity.VelocityEngineUtils;
 
-import com.events.beans.EventBean;
-import com.events.config.ConversionConfig;
-import com.events.domain.Event;
-import com.events.logging.Loggable;
-import com.events.repository.EventsRepository;
-import com.events.service.EventsService;
-import com.events.specification.EventsSpecification;
+import javax.annotation.Resource;
+import java.util.List;
 
 
 @Service

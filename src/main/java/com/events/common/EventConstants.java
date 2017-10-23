@@ -12,7 +12,7 @@ public class EventConstants {
     //Groups
     public static final String GLOBAL_GROUP = "SALES";
 
-    public static final String REPLY_TO_ADDRESS = "arun_mohan@apple.com";
+    public static final String REPLY_TO_ADDRESS = "john_doe@gmail.com";
     public static final String FROM_ADDRESS = "sales_events_team@donotreply.com";
     public static final String EMAIL_TEMPLATE = "emailTemplate.vm";
 

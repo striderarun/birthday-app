@@ -25,14 +25,14 @@ public class CustomDateTimeDeserializer extends StdScalarDeserializer<DateTime> 
 
     @Override
     public DateTime deserialize(JsonParser jsonParser,
-            DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
+            DeserializationContext deserializationContext) throws IOException {
         JsonToken currentToken = jsonParser.getCurrentToken();
         if (currentToken == JsonToken.VALUE_STRING) {
             String dateTimeAsString = jsonParser.getText().trim();
             DateTimeFormatter formatter = DateTimeFormat.forPattern(EventConstants.DATE_FORMAT_PATTERN);
             return formatter.parseDateTime(dateTimeAsString);
         }
-        throw deserializationContext.mappingException(handledType());
+        throw deserializationContext.mappingException("Error while deserializing");
     }
 
 }

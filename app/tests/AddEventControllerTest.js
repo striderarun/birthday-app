@@ -64,11 +64,11 @@ describe('AddEventControllerTest.js', function() {
                 date: '10-APR-16 18:28:54',
                 description: 'John Doe',
                 gender: ['Male'],
-                receiverList: ['john_doe@apple.com'],
-                spotlightUsers: ['john_doe@apple.com'],
+                receiverList: ['john_doe@gmail.com'],
+                spotlightUsers: ['john_doe@gmail.com'],
                 title: 'John Doe',
                 type: ['MEETING'],
-                venue: ['ODC']
+                venue: ['ABC']
             };
 
             this.compile(htmlElement)(this.scope);

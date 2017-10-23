@@ -1,5 +1,6 @@
 package com.events.service.impl;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -9,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.google.common.collect.Iterables;
-import com.google.common.collect.Lists;
 
 @Component
 public class BeanMapper {
@@ -24,7 +24,7 @@ public class BeanMapper {
         } else if (Iterables.isEmpty(sourceCollection)) {
             destList = Collections.emptyList();
         } else {
-            destList = Lists.newArrayList();
+            destList = new ArrayList<>();
             for (Object sourceObj : sourceCollection) {
                 T destObj = mapper.map(sourceObj, destinationClass, mapperId);
                 destList.add(destObj);
