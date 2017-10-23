@@ -4,7 +4,7 @@
   "description": "A sample project built using gruntJS",
   "repository": {
     "type": "git",
-    "url": "git@github.com:striderarun/events-management.git"
+    "url": "git@github.com:striderarun/birthday-app.git"
   },
   "keywords": [
     "sample"

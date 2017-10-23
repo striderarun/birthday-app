@@ -13,7 +13,7 @@ Project setup steps
     e. Run 'bower install' to install the libraries and frameworks mentioned in 'bower.json'
     f. Edit line 7 of the yaxy file so as to point to your local UI code
     g. Run yaxy
-    h. Run /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --proxy-server=localhost:8558
+    h. Run Chrome --proxy-server=localhost:8558
     i. In the opened instance of Chrome, hit localhost:8081/app
 
 2) Server setup -

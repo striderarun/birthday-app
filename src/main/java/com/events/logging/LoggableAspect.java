@@ -16,11 +16,8 @@ public class LoggableAspect {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(LoggableAspect.class);
 
-	// =================================================
-	// Class Methods
-	// =================================================
 	/**
-	 * Log.
+	 * Log method entry and exit times
 	 * 
 	 * @param proceedingJoinPoint the proceeding join point
 	 * @param loggable the loggable
