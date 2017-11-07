@@ -2,6 +2,10 @@
 .idea/
 **/*.iml
 
+#Eclipse
+.settings/
+.project
+
 #Gradle
 .gradle/
 build/
